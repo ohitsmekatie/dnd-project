@@ -5,3 +5,10 @@
 {% else %}
 	<h1>Hello, World!</h1>
 {% endif %}
+
+<!-- Super simple, super ugly form to collect user data -->
+<form action="/results" method="POST">
+  <label for="requestedSpell">What spell would you like to look up:</label>
+  <input type="text" name="requestedSpell">
+  <input type="submit" value="Submit">
+</form> 
