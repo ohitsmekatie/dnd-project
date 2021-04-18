@@ -15,11 +15,14 @@ BASE_URL = "https://www.dnd5eapi.co"
 # USER_INPUT = input("What spell would you like to look up: ")
 
 
+# This is the 'homepage' route template we created previously.
 @app.route('/')
 def hello(name=None):
     return render_template('base.html', name='Alison')
 
-
+# Here we are creating a route to handle the form request and return the `results` template
+# Note that we have to explicitly allow POST requests, since they aren't handled 
+# by the `@app.route()` function by default
 @app.route('/results', methods = ['POST'])
 def returnResults():
    if request.method == 'POST':
