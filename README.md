@@ -11,4 +11,5 @@ To run locally:
  - Activate the virtual env from within the project directory `~/projects/dnd-project/ venv/bin/activate`
  - Install flask in the virtual env `pip install Flask`
  - Install requests module `pip install requests`
+ - Run `FLASK_APP=main.py`
  - Run flask! `FLASK_ENV=development flask run` Note: the `development` flag enables file watching and automatic reloading on file changes wheeeee!
