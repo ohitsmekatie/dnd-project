@@ -52,7 +52,7 @@ def retrieve_user_spell(all_spells):
     # TODO: look into lambda function for this case
     matching_spell = list(filter(get_spell_info, all_spells["results"]))
     if len(matching_spell) == 0:
-        print("Sorry, we couldn't find that spell.")
+        print("Sorry, we couldn't find that spell!")
     else:
         spell_url = matching_spell[0]["url"]
         return make_api_request(BASE_URL + spell_url)
