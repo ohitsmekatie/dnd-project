@@ -84,6 +84,19 @@ button:focus {
   outline: 2px solid #888;
 }
 
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    margin-bottom: 2rem;
+}
+
+.button-group button {
+    flex: 0 0 auto;
+}
+
+
 /* ==============================
    Content Areas
    ============================== */
