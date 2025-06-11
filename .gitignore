@@ -1,4 +1,46 @@
-dnd-api-project.ipynb
-__pycache__/ 
-venv/ 
-.ipynb_checkpoints/
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.env
+
+# macOS system files
+.DS_Store
+
+# Flask files
+instance/
+*.db
+
+# Logs and temp files
+*.log
+*.tmp
+
+# VS Code settings (if you use it)
+.vscode/
+
+# Python egg info
+*.egg-info/
+
+# pipenv / poetry
+Pipfile.lock
+poetry.lock
+
+# pyenv environments
+.python-version
+
+# Static asset caches
+*.sass-cache/
+.cache/
+
+# Coverage and test artifacts
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# __init__.py artifacts
+*.pyo
+

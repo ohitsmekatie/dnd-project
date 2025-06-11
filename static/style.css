@@ -1,0 +1,33 @@
+body {
+    background-color: #111;
+    color: #eee;
+    font-family: 'Georgia', serif;
+    text-align: center;
+    padding: 2rem;
+}
+
+nav {
+    background-color: #222;
+    padding: 1rem;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #444;
+}
+
+button {
+    background-color: #444;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+button:hover {
+    background-color: #666;
+}
+
+footer {
+    margin-top: 4rem;
+    color: #777;
+}
