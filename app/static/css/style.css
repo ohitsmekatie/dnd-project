@@ -21,10 +21,6 @@ html {
 
 body {
   background-color: var(--color-background);
-  background-image: url('/static/stone-bg.jpg');
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
   color: var(--color-text);
   font-family: 'Georgia', serif;
   line-height: 1.6;

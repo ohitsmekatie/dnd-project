@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const itemButton = document.getElementById("item-button");
     const monsterButton = document.getElementById("monster-button");
     const itemOutput = document.getElementById("item-output");
+    const charButton = document.getElementById("character-button");
 
     itemButton.addEventListener("click", async () => {
         try {
@@ -41,6 +42,25 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Error fetching monster:', error);
             itemOutput.innerHTML = `<p class="error">Failed to load monster: ${error.message}</p>`;
         }
+    });
+
+
+
+    charButton.addEventListener("click", async () => {
+    try {
+        const res = await fetch("/random-character");
+        if (!res.ok) throw new Error(`HTTP error: ${res.status}`);
+        const data = await res.json();
+
+        itemOutput.innerHTML = `
+        <div class="item-card">
+            <h2 class="item-name">${data.first_name} ${data.last_name}</h2>
+        </div>
+        `;
+    } catch (error) {
+        console.error('Error fetching character:', error);
+        itemOutput.innerHTML = `<p class="error">Failed to load character: ${error.message}</p>`;
+    }
     });
 
 });

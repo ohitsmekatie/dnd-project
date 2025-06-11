@@ -5,14 +5,16 @@ A simple web application that generates random D&D 5e equipment and magical item
 ## Features
 
 - Single-page Flask application
-- Random generation of equipment and magical items from the official D&D 5e SRD
+- Random generation of equipment and magical items from the official D&D 5e API
+- Random generation of monster from the official D&D 5e API
+- Random first + last name, using the scraped data from the scripts in [this repository](https://github.com/ohitsmekatie/get-data-for-loremore). This is a repository of one-off scripts I wrote in Python to help me more programattically generated the database of content
 - JSON display of complete item details
 
 
 ### Next:
 - Style the payload
 - Style the app
-- Access more endpoints, expand the navigation and app 
+- Access more endpoints, expand the navigation and app
 
 ## Prerequisites
 
@@ -50,8 +52,8 @@ Then open your browser and navigate to [http://127.0.0.1:5000/](http://127.0.0.1
 ## How It Works
 
 - The application uses Flask to serve a simple web interface
-- When the "Give me an item" button is clicked, a random item is fetched from the D&D 5e API
-- The item details are displayed on the page in JSON format for now because I wanted to get something up and running, this will be formatted later
+- When the "Give me an n" button is clicked, a random item is fetched from the D&D 5e API or from other data sources explained above
+
 
 ## Dependencies
 

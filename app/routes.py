@@ -1,6 +1,7 @@
-from flask import Blueprint, render_template, jsonify
-import requests
+import json
 import random
+from flask import Blueprint, render_template, jsonify, current_app
+import requests
 
 main = Blueprint('main', __name__)
 
@@ -54,3 +55,15 @@ def random_monster():
         return jsonify(monster_details)
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
+
+@main.route('/random-character')
+def random_character():
+    try:
+        dirname = current_app.root_path + '/data/'
+        with open(dirname + 'first_names.json') as f1, open(dirname + 'last_names.json') as f2:
+            first = random.choice(json.load(f1))
+            last = random.choice(json.load(f2))
+        return jsonify({'first_name': first, 'last_name': last})
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
