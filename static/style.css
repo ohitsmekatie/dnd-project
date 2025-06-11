@@ -104,12 +104,33 @@ button:focus {
   width: 100%;
 }
 
-#item-output pre {
-  max-width: 100%;
-  overflow-x: auto;
-  text-align: left;
-  white-space: pre-wrap;
-  word-wrap: break-word;
+.item-card {
+  background-color: rgba(20, 20, 20, 0.6);
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin: 2rem auto;
+  max-width: 600px;
+  box-shadow: 0 0 10px #000;
+  text-align: center;
+}
+
+.item-name {
+  font-size: 1.75rem;
+  color: #9fd3c7;
+  margin-bottom: 0.5rem;
+}
+
+.item-rarity {
+  font-weight: bold;
+  color: #fdd835;
+  margin-bottom: 1rem;
+}
+
+.item-desc {
+  color: #ddd;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 .error {
