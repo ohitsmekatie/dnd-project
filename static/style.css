@@ -1,33 +1,118 @@
-body {
-    background-color: #111;
-    color: #eee;
-    font-family: 'Georgia', serif;
-    text-align: center;
-    padding: 2rem;
+/* ==============================
+   Base Styles and Typography
+   ============================== */
+
+:root {
+  --color-background: #2b2b2b;
+  --color-text: #f0f0f0;
+  --color-dark: #222;
+  --color-button: #444;
+  --color-button-hover: #666;
+  --color-footer: #777;
 }
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--color-background);
+  background-image: url('/static/stone-bg.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: var(--color-text);
+  font-family: 'Georgia', serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* ==============================
+   Layout Components
+   ============================== */
 
 nav {
-    background-color: #222;
-    padding: 1rem;
-    font-size: 1.5rem;
-    border-bottom: 1px solid #444;
+  background-color: var(--color-dark);
+  border-bottom: 1px solid #444;
+  font-size: 1.5rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
 }
 
-button {
-    background-color: #444;
-    color: #fff;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    border: none;
-    cursor: pointer;
-    margin-top: 1rem;
-}
-
-button:hover {
-    background-color: #666;
+main {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.53);
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 2rem;
 }
 
 footer {
-    margin-top: 4rem;
-    color: #777;
+  color: var(--color-footer);
+  margin-top: 4rem;
+  padding: 1rem;
+}
+
+/* ==============================
+   Interactive Elements
+   ============================== */
+
+button {
+  background-color: var(--color-button);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--color-button-hover);
+}
+
+button:focus {
+  outline: 2px solid #888;
+}
+
+/* ==============================
+   Content Areas
+   ============================== */
+
+.item-generator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#item-output {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  margin-top: 2rem;
+  overflow-wrap: break-word;
+  padding: 1rem;
+  text-align: left;
+  width: 100%;
+}
+
+#item-output pre {
+  max-width: 100%;
+  overflow-x: auto;
+  text-align: left;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.error {
+  color: #ff6b6b;
+  font-weight: bold;
 }
